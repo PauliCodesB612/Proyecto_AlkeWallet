@@ -1,0 +1,275 @@
+/* Estilos específicos para sendmoney.html */
+
+.navbar {
+    border-bottom: 3px solid var(--secondary-pink);
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-pink) 0%, var(--accent-pink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-header {
+    animation: fadeInDown 0.6s ease;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-pink);
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.current-balance-card {
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.current-balance-card .card {
+    background: linear-gradient(135deg, var(--primary-pink) 0%, var(--accent-pink) 100%);
+    color: var(--white);
+    border-radius: 20px;
+}
+
+.current-balance {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.send-money-card {
+    animation: fadeInLeft 0.6s ease 0.4s both;
+}
+
+.send-money-card .card, .contacts-card .card, .info-card .card {
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.contacts-card {
+    animation: fadeInRight 0.6s ease 0.4s both;
+}
+
+.info-card {
+    animation: fadeInRight 0.6s ease 0.6s both;
+}
+
+.card-title {
+    color: var(--primary-pink);
+    font-weight: 700;
+}
+
+.form-label {
+    color: var(--dark-pink);
+    font-weight: 600;
+}
+
+.input-group-text {
+    background: var(--light-pink);
+    border: 2px solid var(--secondary-pink);
+    color: var(--primary-pink);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#transferAmount {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-pink);
+}
+
+.transfer-summary {
+    background: var(--light-pink);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.contact-item {
+    background: var(--light-pink);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    background: var(--secondary-pink);
+    transform: translateX(5px);
+}
+
+.contact-item.selected {
+    background: linear-gradient(135deg, var(--primary-pink) 0%, var(--accent-pink) 100%);
+    color: var(--white);
+}
+
+.contact-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-pink) 0%, var(--accent-pink) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.contact-item.selected .contact-avatar {
+    background: var(--white);
+    color: var(--primary-pink);
+}
+
+.contact-info {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.contact-name {
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--text-dark);
+}
+
+.contact-item.selected .contact-name,
+.contact-item.selected .contact-email {
+    color: var(--white);
+}
+
+.contact-email {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-contact-action {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: var(--white);
+    color: var(--primary-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.btn-contact-action:hover {
+    background: var(--primary-pink);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.modal-content {
+    border-radius: 20px;
+    border: none;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--light-pink) 0%, var(--secondary-pink) 100%);
+    border-radius: 20px 20px 0 0;
+    border-bottom: none;
+}
+
+.modal-title {
+    color: var(--primary-pink);
+    font-weight: 700;
+}
+
+.info-card .card {
+    background: linear-gradient(135deg, var(--light-pink) 0%, rgba(255, 182, 217, 0.3) 100%);
+}
+
+.info-card ul {
+    padding-left: 20px;
+}
+
+.info-card li {
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 992px) {
+    .contacts-card {
+        animation: fadeInUp 0.6s ease 0.6s both;
+    }
+    
+    .info-card {
+        animation: fadeInUp 0.6s ease 0.8s both;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .current-balance {
+        font-size: 1.5rem;
+    }
+}

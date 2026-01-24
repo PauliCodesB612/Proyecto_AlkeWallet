@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - Movimientos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/transactions.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="menu.html">
+                <span class="brand-text">Alke Wallet</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">← Volver al Menú</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="page-header text-center mb-4">
+                    <h1 class="page-title">📊 Mis Movimientos</h1>
+                    <p class="page-subtitle">Revisa el historial completo de tus transacciones</p>
+                </div>
+                
+                <div class="summary-cards mb-4">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="card summary-card">
+                                <div class="card-body text-center">
+                                    <div class="summary-icon">💰</div>
+                                    <p class="summary-label">Saldo Actual</p>
+                                    <h3 class="summary-amount" id="currentBalance">$0.00</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card summary-card">
+                                <div class="card-body text-center">
+                                    <div class="summary-icon">📥</div>
+                                    <p class="summary-label">Total Depósitos</p>
+                                    <h3 class="summary-amount text-success" id="totalDeposits">$0.00</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card summary-card">
+                                <div class="card-body text-center">
+                                    <div class="summary-icon">📤</div>
+                                    <p class="summary-label">Total Enviado</p>
+                                    <h3 class="summary-amount text-danger" id="totalTransfers">$0.00</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filters-card mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row align-items-end g-3">
+                                <div class="col-md-4">
+                                    <label for="filterType" class="form-label">Tipo de Transacción</label>
+                                    <select class="form-select" id="filterType">
+                                        <option value="all">Todas</option>
+                                        <option value="deposit">Depósitos</option>
+                                        <option value="transfer">Transferencias</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="filterDateFrom" class="form-label">Desde</label>
+                                    <input type="date" class="form-control" id="filterDateFrom">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="filterDateTo" class="form-label">Hasta</label>
+                                    <input type="date" class="form-control" id="filterDateTo">
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-primary w-100" id="applyFilters">Filtrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="transactions-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="card-title mb-0">Historial de Transacciones</h5>
+                                <button class="btn btn-sm btn-outline-pink" id="clearHistory">
+                                    🗑️ Limpiar Historial
+                                </button>
+                            </div>
+                            
+                            <div id="transactionsList">
+                                <div class="text-center py-5">
+                                    <div class="empty-state">
+                                        <div class="empty-icon">📭</div>
+                                        <p class="text-muted">No hay transacciones para mostrar</p>
+                                        <a href="menu.html" class="btn btn-primary mt-3">Ir al Menú</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de Detalle -->
+    <div class="modal fade" id="transactionDetailModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detalle de Transacción</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="transactionDetailContent">
+                    <!-- Contenido dinámico -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/transactions.js"></script>
+</body>
+</html>

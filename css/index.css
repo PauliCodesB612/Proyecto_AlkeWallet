@@ -1,0 +1,121 @@
+/* Estilos específicos para index.html */
+
+.welcome-container {
+    position: relative;
+    max-width: 900px;
+    padding: 40px;
+}
+
+.logo-container {
+    animation: fadeInDown 1s ease;
+}
+
+.logo-text {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-pink) 0%, var(--accent-pink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--dark-pink);
+    font-weight: 500;
+}
+
+.welcome-card {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease 0.3s both;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-card::before {
+    content: '🌺';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 80px;
+    opacity: 0.1;
+}
+
+.welcome-card h2 {
+    color: var(--primary-pink);
+    font-weight: 700;
+}
+
+.features {
+    animation: fadeInUp 1s ease 0.6s both;
+}
+
+.feature-item {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px 20px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.feature-item h5 {
+    color: var(--primary-pink);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 2.5rem;
+    }
+    
+    .welcome-card {
+        padding: 30px 20px;
+    }
+    
+    .feature-item {
+        margin-bottom: 15px;
+    }
+}

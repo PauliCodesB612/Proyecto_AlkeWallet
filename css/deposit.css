@@ -1,0 +1,175 @@
+/* Estilos específicos para deposit.html */
+
+.navbar {
+    border-bottom: 3px solid var(--secondary-pink);
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-pink) 0%, var(--accent-pink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-header {
+    animation: fadeInDown 0.6s ease;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-pink);
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.current-balance-card {
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.current-balance-card .card {
+    background: linear-gradient(135deg, var(--primary-pink) 0%, var(--accent-pink) 100%);
+    color: var(--white);
+    border-radius: 20px;
+}
+
+.current-balance, .new-balance {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.deposit-card {
+    animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+.deposit-card .card {
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    color: var(--dark-pink);
+    font-weight: 600;
+}
+
+.input-group-text {
+    background: var(--light-pink);
+    border: 2px solid var(--secondary-pink);
+    color: var(--primary-pink);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#depositAmount {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-pink);
+}
+
+.quick-amounts {
+    background: var(--light-pink);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.btn-outline-pink {
+    border: 2px solid var(--primary-pink);
+    color: var(--primary-pink);
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-pink:hover, .btn-outline-pink.active {
+    background: linear-gradient(135deg, var(--primary-pink) 0%, var(--accent-pink) 100%);
+    color: var(--white);
+    border-color: var(--primary-pink);
+    transform: scale(1.05);
+}
+
+.quick-btn {
+    padding: 10px 5px;
+    font-size: 0.9rem;
+}
+
+.info-card {
+    animation: fadeInUp 0.6s ease 0.6s both;
+}
+
+.info-card .card {
+    background: linear-gradient(135deg, var(--light-pink) 0%, rgba(255, 182, 217, 0.3) 100%);
+    border-radius: 15px;
+}
+
+.info-card .card-title {
+    color: var(--primary-pink);
+    font-weight: 700;
+}
+
+.info-card ul {
+    padding-left: 20px;
+}
+
+.info-card li {
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+/* Animaciones de entrada */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación del saldo */
+.balance-update {
+    animation: pulse 0.6s ease;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .current-balance, .new-balance {
+        font-size: 1.5rem;
+    }
+    
+    .quick-btn {
+        font-size: 0.8rem;
+        padding: 8px 3px;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - Iniciar Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="login-container">
+            <div class="flower-decoration top-left"></div>
+            <div class="flower-decoration bottom-right"></div>
+            
+            <div class="login-card">
+                <div class="text-center mb-4">
+                    <h1 class="logo-text">Alke Wallet</h1>
+                    <p class="subtitle">Inicia sesión en tu cuenta</p>
+                </div>
+                
+                <div id="alertContainer"></div>
+                
+                <form id="loginForm">
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="••••••••" required>
+                    </div>
+                    
+                    <div class="mb-4 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">
+                            Recordarme
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary w-100 mb-3">Iniciar Sesión</button>
+                    
+                    <div class="text-center">
+                        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </form>
+                
+                <div class="divider">
+                    <span>o</span>
+                </div>
+                
+                <div class="demo-credentials">
+                    <p class="text-center mb-2"><strong>Credenciales de prueba:</strong></p>
+                    <p class="text-center small mb-0">Email: <code>demo@alkewallet.com</code></p>
+                    <p class="text-center small">Contraseña: <code>demo123</code></p>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="index.html" class="btn btn-secondary">Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* Estilos Globales - Alke Wallet */
+
+:root {
+    --primary-pink: #ff69b4;
+    --secondary-pink: #ffb6d9;
+    --light-pink: #ffe6f0;
+    --dark-pink: #d63384;
+    --accent-pink: #ff1493;
+    --white: #ffffff;
+    --text-dark: #4a4a4a;
+    --shadow: rgba(255, 105, 180, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--light-pink) 0%, var(--secondary-pink) 100%);
+    color: var(--text-dark);
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '🌸';
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    font-size: 60px;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+body::after {
+    content: '🌺';
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    font-size: 70px;
+    opacity: 0.1;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-pink) 0%, var(--accent-pink) 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--shadow);
+    background: linear-gradient(135deg, var(--accent-pink) 0%, var(--primary-pink) 100%);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--primary-pink);
+    border: 2px solid var(--primary-pink);
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-pink);
+    color: var(--white);
+    border-color: var(--primary-pink);
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    overflow: hidden;
+}
+
+.form-control, .form-select {
+    border-radius: 15px;
+    border: 2px solid var(--secondary-pink);
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+}
+
+.navbar {
+    background: var(--white) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.flower-decoration {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    opacity: 0.3;
+}
+
+.flower-decoration::before {
+    content: '🌸';
+    font-size: 60px;
+    position: absolute;
+}
+
+.flower-decoration.top-left {
+    top: -20px;
+    left: -20px;
+    animation: rotate 20s linear infinite;
+}
+
+.flower-decoration.top-right {
+    top: -20px;
+    right: -20px;
+    animation: rotate 15s linear infinite reverse;
+}
+
+.flower-decoration.bottom-left {
+    bottom: -20px;
+    left: -20px;
+    animation: rotate 18s linear infinite;
+}
+
+.flower-decoration.bottom-right {
+    bottom: -20px;
+    right: -20px;
+    animation: rotate 22s linear infinite reverse;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.alert {
+    border-radius: 15px;
+    border: none;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+}
+
+.alert-info {
+    background: linear-gradient(135deg, var(--light-pink) 0%, var(--secondary-pink) 100%);
+    color: var(--dark-pink);
+}
